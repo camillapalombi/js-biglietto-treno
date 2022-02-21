@@ -4,10 +4,18 @@ let kilometers = prompt('Quanti km vuoi percorrere?');
 
 let age = prompt('Quanti anni hai?');
 
-const kmPrice = 0.21;
+let kmPrice = 0.21;
 
-const finalPrice = (kilometers * kmPrice);
+if (age < 18) {
+    kmPrice = 0.168;
+}
+
+if (age > 65) {
+    kmPrice = 0.126;
+}
+
+let finalPrice = (kilometers * kmPrice);
 
 let element = document.getElementById('my_output');
 
-element.innerHTML = `Il prezzo del biglietto è di ${finalPrice} €`;
+element.innerHTML = `Il prezzo del biglietto è di ${finalPrice}€`;
