@@ -16,6 +16,8 @@ if (age > 65) {
 
 let finalPrice = (kilometers * kmPrice);
 
+let finalPrice2 = (Math.round(finalPrice * 100) / 100);
+
 let element = document.getElementById('my_output');
 
-element.innerHTML = `Il prezzo del biglietto è di ${finalPrice}€`;
+element.innerHTML = `Il prezzo del biglietto è di ${finalPrice2}€`;
